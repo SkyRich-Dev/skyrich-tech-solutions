@@ -98,6 +98,9 @@ SkyRich Tech Solutions enterprise website built with React + Vite + TailwindCSS 
 
 - Pages: Home, Services, Industries, Products, Insights, About, Careers, Contact
 - Product pages: AIDA, AIVA, Orbit CRM
+- Blog: 40 SEO-optimized articles (10 in `src/data/blog-articles.ts` + 30 in `src/data/blog-articles-new.ts`), rendered at `/insights/:slug`
+- Blog categories: Industry 4.0, Smart Manufacturing, AI & Data Analytics, AI & ML, Vision & Quality, Plant & Process, Digital Transformation
+- Insights page: Category filter tabs with state-driven filtering
 - Routing: wouter (client-side)
 - Animations: framer-motion
 - Forms: react-hook-form + zod validation
@@ -105,6 +108,8 @@ SkyRich Tech Solutions enterprise website built with React + Vite + TailwindCSS 
 - Brand colors: Deep Blue (#0A1F3C), Tech Blue (#2D7FF9), Innovation Orange (#FF7A1A)
 - Logo: `public/images/skyrich-logo.png` (transparent PNG, referenced via BASE_URL)
 - Hero: 2-column layout with auto-rotating carousel (4 slides, 6s interval), animated stats panel, progress indicators
+- SEO: Reusable `SEOHead.tsx` component with per-page meta titles, descriptions, keywords, canonical URLs, OpenGraph/Twitter cards, and JSON-LD structured data (Organization, LocalBusiness, Product, BreadcrumbList, BlogPosting)
+- Static SEO files: `public/sitemap.xml`, `public/robots.txt`
 - `pnpm --filter @workspace/web run dev` — run the dev server
 
 ### `scripts` (`@workspace/scripts`)

@@ -11,9 +11,12 @@ import AidaProduct from "./pages/products/Aida";
 import AivaProduct from "./pages/products/Aiva";
 import OrbitProduct from "./pages/products/Orbit";
 import Insights from "./pages/Insights";
+import InsightArticle from "./pages/InsightArticle";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/not-found";
 
 const queryClient = new QueryClient();
@@ -29,9 +32,12 @@ function Router() {
       <Route path="/products/aiva" component={AivaProduct} />
       <Route path="/products/orbit-crm" component={OrbitProduct} />
       <Route path="/insights" component={Insights} />
+      <Route path="/insights/:slug" component={InsightArticle} />
       <Route path="/about" component={About} />
       <Route path="/careers" component={Careers} />
       <Route path="/contact" component={Contact} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
       <Route component={NotFound} />
     </Switch>
   );
