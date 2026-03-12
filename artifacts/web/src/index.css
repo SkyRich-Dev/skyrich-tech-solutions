@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --font-sans: 'Roboto', sans-serif;
+  --font-display: 'Inter', sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+:root {
+  --background: 216 33% 97%;
+  --foreground: 214 75% 14%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 214 75% 14%;
+  --card-border: 216 20% 88%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 214 75% 14%;
+  --popover-border: 216 20% 88%;
+
+  --primary: 216 95% 58%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 27 100% 55%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --accent: 18 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  
+  --muted: 216 20% 93%;
+  --muted-foreground: 215 15% 45%;
+  
+  --border: 216 20% 88%;
+  --input: 216 20% 85%;
+  --ring: 216 95% 58%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --radius: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-gray-200/60 shadow-[0_8px_32px_0_rgba(0,0,0,0.06)];
+  }
+  
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-white hover:border-gray-300/80 hover:shadow-[0_8px_32px_0_rgba(45,127,249,0.12)] hover:-translate-y-1;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#2D7FF9] to-[#FF7A1A];
+  }
+  
+  .text-gradient-orange {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF7A1A] to-[#FF4D00];
+  }
+
+  .bg-gradient-primary {
+    @apply bg-gradient-to-br from-[#0A1F3C] to-[#08142B];
+  }
+
+  .bg-gradient-hero {
+    @apply bg-gradient-to-br from-[#0A1F3C] via-[#102a4a] to-[#0A1F3C];
+  }
+}
+
+@media (pointer: fine) {
+  html.custom-cursor-active,
+  html.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 30s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}

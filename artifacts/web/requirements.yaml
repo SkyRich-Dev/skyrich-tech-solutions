@@ -1,0 +1,28 @@
+packages:
+  "framer-motion": "Needed for premium scroll animations, page transitions, and interactive micro-interactions appropriate for a futuristic enterprise tech site."
+  "react-hook-form": "For robust handling of the Contact form and Demo Request forms."
+  "@hookform/resolvers": "For integrating Zod validation with react-hook-form."
+  "zod": "Schema validation for forms."
+  "clsx": "Utility for constructing className strings conditionally."
+  "tailwind-merge": "Utility for safely merging tailwind classes without style conflicts."
+
+images:
+  - path: "artifacts/web/public/images/hero-abstract.png"
+    description: "Dark futuristic abstract background with deep navy blue background, glowing tech blue connecting nodes, and subtle orange gradient light leaks, representing enterprise technology and data networks."
+    aspect_ratio: "16:9"
+  - path: "artifacts/web/public/images/aida-abstract.png"
+    description: "Abstract representation of AI data analytics. Glowing data streams, predictive graphs, deep dark blue background with vibrant blue and orange highlights, high tech futuristic."
+    aspect_ratio: "16:9"
+  - path: "artifacts/web/public/images/aiva-abstract.png"
+    description: "Abstract representation of computer vision AI. Digital eye, glowing grid patterns, visual analytics, deep navy blue with bright cyan and orange accents."
+    aspect_ratio: "16:9"
+  - path: "artifacts/web/public/images/orbit-abstract.png"
+    description: "Abstract representation of enterprise CRM. Connected people nodes, global network, bright orange and blue glowing connections on dark navy background."
+    aspect_ratio: "16:9"
+  - path: "artifacts/web/public/images/about-building.png"
+    description: "Modern enterprise corporate glass building at night with subtle futuristic blue and orange interior lighting."
+    aspect_ratio: "16:9"
+
+notes:
+  - The application is primarily static marketing pages, no complex backend API is required.
+  - Forms will simulate submission state with local timeouts.

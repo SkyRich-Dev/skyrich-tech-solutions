@@ -1,0 +1,232 @@
+Replit AI Prompt
+Build a modern enterprise technology website for SkyRich Tech Solutions using React + TailwindCSS + Vite (or Next.js).
+The website must be dynamic, enterprise-grade, visually powerful, and comparable in quality to TCS, Accenture, IBM, and Siemens websites.
+The website should emphasize Industry 4.0, AI platforms, IoT, and digital transformation.
+Design should feel futuristic, premium, and technology-driven.
+Branding
+Use colors inspired by the SkyRich Tech Solutions logo.
+Primary Colors
+Deep Blue
+#0A1F3C
+Tech Blue
+#2D7FF9
+Secondary Colors
+Innovation Orange
+#FF7A1A
+Gradient Orange
+#FF4D00
+Neutral
+Light Grey
+#F5F7FA
+Dark Grey
+#2E2E2E
+Use dark technology gradients for hero sections.
+Example background:
+linear-gradient(135deg, #0A1F3C, #08142B)
+Accent highlights should use blue to orange gradients.
+Typography
+Headings
+Inter / Poppins
+Body
+Roboto / Open Sans
+Use large bold headings with futuristic tech feel.
+Website Pages
+Create the following pages.
+Home
+Services
+Industries
+Products
+Insights (Blog)
+About
+Careers
+Contact
+Add dedicated product pages.
+Products / AIDA
+Products / AIVA
+Products / Orbit CRM
+Homepage
+Hero Section
+Headline
+Innovating Industries with SkyRich Tech Solutions
+Subtext
+Empowering enterprises with IoT, AI, cloud computing, and Industry 4.0 platforms to drive intelligent digital transformation.
+CTA
+Explore Solutions
+Book Consultation
+Add animated technology background with:
+digital particles
+network lines
+soft glow animations
+Services Section
+Create animated cards for:
+IoT & Smart Manufacturing
+AI & Data Analytics
+Cloud Infrastructure
+Automation & Robotics
+Cybersecurity
+Industries Section
+Interactive industry cards.
+Automotive
+Manufacturing
+Healthcare
+Energy
+Logistics & Supply Chain
+Products Section (Important)
+Create a featured products section highlighting SkyRich proprietary platforms.
+Each product card should show:
+icon
+short description
+CTA button
+Products:
+AIDA
+AI Based Data Analytics Platform
+Description
+AIDA enables organizations to transform raw operational data into powerful insights using machine learning and AI-driven analytics.
+Capabilities
+Predictive analytics
+Operational intelligence
+Production data analysis
+Supply chain analytics
+Real-time dashboards
+CTA
+Explore AIDA
+AIVA
+AI Based Visual Analytics Platform
+Description
+AIVA converts complex datasets into intuitive visual dashboards and AI-powered visual insights for faster decision making.
+Capabilities
+Visual analytics dashboards
+Real-time KPI monitoring
+AI-powered anomaly detection
+Interactive reports
+Business intelligence visualization
+CTA
+Explore AIVA
+Orbit CRM
+Future Smart CRM for SMEs
+Description
+Orbit CRM is a next-generation intelligent CRM designed for small and medium businesses to manage leads, customers, automation, and analytics in one platform.
+Capabilities
+Lead management
+Sales pipeline tracking
+Customer engagement automation
+Marketing automation
+Business performance analytics
+CTA
+Explore Orbit CRM
+Product Pages
+Each product must have a dedicated product landing page.
+Structure:
+Hero Section
+Product name
+Tagline
+Product illustration
+Overview
+Explain product purpose.
+Key Features
+Display features in animated cards.
+Use Cases
+Manufacturing
+Sales Teams
+Operations
+Enterprise Management
+Technology Stack
+AI models
+Cloud architecture
+Data processing
+Benefits
+Productivity improvement
+Real-time decision making
+Cost reduction
+Operational transparency
+CTA
+Request Demo
+Schedule Consultation
+UI Design Requirements
+Design must feel premium enterprise SaaS product website.
+Include:
+smooth scroll
+hover animations
+glassmorphism cards
+parallax backgrounds
+micro animations
+Libraries allowed
+Framer Motion
+GSAP
+Three.js (optional)
+Navigation
+Sticky header
+Logo on left
+Menu center
+CTA button on right
+CTA button
+Book Demo
+Mobile responsive hamburger menu.
+Blog / Insights
+Create a blog page.
+Categories
+Industry 4.0
+AI & Machine Learning
+IoT Innovations
+Smart Manufacturing
+Digital Transformation
+About Page
+Include
+Company vision
+Leadership approach
+Mission
+Mission
+Transform 500 industries by 2030 using intelligent technology solutions.
+Careers
+Include job listings.
+Highlight:
+innovation culture
+advanced technology projects
+career growth
+Contact Page
+Include form fields:
+Name
+Email
+Company
+Message
+Contact details:
+Email
+info@skyrichtechsolutions.com
+Phone
++91 9384801120
+Location
+Perungudi, Chennai
+Include Google Maps integration.
+Footer
+Enterprise style footer.
+Sections
+Company
+Products
+Services
+Industries
+Resources
+Include LinkedIn icon.
+SEO Requirements
+Each page must include
+meta titles
+meta descriptions
+schema markup
+structured headings
+Performance
+Fast loading under 2 seconds.
+Use
+lazy loading
+optimized images
+code splitting
+Folder Structure
+src
+components
+pages
+products
+assets
+styles
+hooks
+utils
+Important Instruction
+Do not copy content from any other company website.
+Design must feel unique, futuristic, and premium, suitable for a global technology consulting company.
