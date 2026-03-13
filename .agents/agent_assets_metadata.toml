@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "LXmOpgH6YD3o195sL-aV5"
+uri = "file://SkyRich_Developer_Documentation.docx"
+type = "word_document"
+title = "SkyRich Tech Solutions - Complete Developer Documentation"

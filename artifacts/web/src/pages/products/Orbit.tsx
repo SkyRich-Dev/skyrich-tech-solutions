@@ -4,15 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Users, Target, MessageSquare, TrendingUp, Filter } from "lucide-react";
+import { SEOHead, createBreadcrumbSchema, createProductSchema } from "@/components/SEOHead";
 
 export default function OrbitProduct() {
   return (
     <MainLayout>
+      <SEOHead
+        title="Orbit CRM - Smart CRM Platform for SMEs | AI-Powered Customer Intelligence"
+        description="Orbit CRM by SkyRich Tech Solutions is a future-smart CRM platform built for SMEs, offering powerful lead management, automated engagement, AI-powered analytics, and customer intelligence without enterprise complexity."
+        keywords="smart CRM for SMEs, AI CRM platform, customer intelligence software, lead management, sales automation, customer relationship management, business growth CRM"
+        structuredData={[
+          createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Products", url: "/products" }, { name: "Orbit CRM", url: "/products/orbit-crm" }]),
+          createProductSchema({ name: "Orbit CRM - Smart CRM for SMEs", description: "Future-smart CRM platform built for SMEs with AI-powered lead management and customer intelligence.", url: "/products/orbit-crm", category: "BusinessApplication" }),
+        ]}
+      />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-primary">
         <div className="absolute inset-0 z-0">
           <img 
-            src={`${import.meta.env.BASE_URL}images/orbit-abstract.png`} 
-            alt="Orbit CRM Background" 
+            src={`${import.meta.env.BASE_URL}images/orbit-abstract.jpg`} 
+            alt="Orbit CRM AI-powered customer relationship management platform" 
             className="w-full h-full object-cover opacity-15 mix-blend-screen"
           />
         </div>

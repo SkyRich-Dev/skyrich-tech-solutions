@@ -1,4 +1,4 @@
-modules = ["nodejs-24"]
+modules = ["nodejs-24", "postgresql-16"]
 
 [[artifacts]]
 id = "artifacts/api-server"
@@ -28,3 +28,8 @@ timeoutMs = 20000
 
 [nix]
 channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+JWT_SECRET = "255298ff27cd1b1aeb7299d1a5ada725aae2cc2446389b8f60fba522811d60c2e8de84d3a6269270b5ddbbd70de7a677"

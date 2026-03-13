@@ -2,6 +2,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Cpu, Database, Cloud, Activity, Shield, Code, Server, Network } from "lucide-react";
 import { motion } from "framer-motion";
+import { SEOHead, createBreadcrumbSchema } from "@/components/SEOHead";
 
 const services = [
   { icon: Cpu, title: "IoT & Smart Manufacturing", desc: "Implement industrial IoT sensors to capture machine telemetry, track performance, and automate production lines with real-time feedback loops." },
@@ -17,6 +18,12 @@ const services = [
 export default function Services() {
   return (
     <MainLayout>
+      <SEOHead
+        title="Enterprise Technology Services | IoT, AI & Cloud Solutions"
+        description="SkyRich Tech Solutions offers comprehensive enterprise technology services including IoT and smart manufacturing, AI data analytics, cloud infrastructure, automation, cybersecurity, and custom software development."
+        keywords="IoT smart manufacturing, AI data analytics, cloud infrastructure, manufacturing automation, enterprise cybersecurity, custom software development, web development services, mobile app development, digital consulting, cyber security solutions"
+        structuredData={[createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }])]}
+      />
       <div className="pt-32 pb-10 px-6 bg-gradient-primary relative">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#2D7FF9]/20 blur-[150px] rounded-full" />

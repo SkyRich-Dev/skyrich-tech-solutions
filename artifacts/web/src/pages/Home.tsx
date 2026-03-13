@@ -6,40 +6,20 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { cn } from "@/lib/utils";
+import { SEOHead, organizationSchema, localBusinessSchema } from "@/components/SEOHead";
 
-const insightsPosts = [
-  {
-    title: "The Dawn of Industry 4.0: What It Means for Manufacturing",
-    category: "Industry 4.0",
-    date: "Oct 12, 2024",
-    author: "Dr. Sarah Chen",
-    excerpt: "Explore how interconnected sensors and predictive AI are reshaping the factory floor, driving unprecedented efficiency.",
-  },
-  {
-    title: "How Visual Analytics is Reducing QA Costs by 40%",
-    category: "AI & ML",
-    date: "Sep 28, 2024",
-    author: "Michael Roberts",
-    excerpt: "Computer vision models are now capable of detecting micro-fractures on assembly lines faster and more accurately than human inspectors.",
-  },
-  {
-    title: "Securing the IoT Edge: Challenges and Solutions",
-    category: "Cybersecurity",
-    date: "Sep 15, 2024",
-    author: "Elena Rodriguez",
-    excerpt: "As more devices connect to the enterprise network, the attack surface expands. Learn how to implement zero-trust at the edge.",
-  },
-];
+import { blogArticles } from "@/data/blog-articles";
+const insightsPosts = blogArticles.slice(0, 3);
 
 const industries = [
-  { name: "Manufacturing", icon: Factory, image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" },
-  { name: "Automotive", icon: Car, image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80" },
-  { name: "Healthcare", icon: Stethoscope, image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" },
-  { name: "Energy", icon: Zap, image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" },
-  { name: "Logistics", icon: Truck, image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" },
-  { name: "Retail", icon: Users, image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" },
-  { name: "Telecom", icon: Activity, image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" },
-  { name: "Finance", icon: BarChart3, image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80" },
+  { name: "Manufacturing", icon: Factory, image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80", alt: "Smart manufacturing IoT factory automation solutions" },
+  { name: "Automotive", icon: Car, image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80", alt: "Automotive manufacturing digital transformation and car manufacturing automation" },
+  { name: "Healthcare", icon: Stethoscope, image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80", alt: "Healthcare technology solutions and AI diagnostics" },
+  { name: "Energy", icon: Zap, image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80", alt: "Smart energy monitoring systems for power grid optimization" },
+  { name: "Logistics", icon: Truck, image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80", alt: "Logistics and supply chain analytics automation" },
+  { name: "Retail", icon: Users, image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80", alt: "Retail analytics and inventory management systems" },
+  { name: "Telecom", icon: Activity, image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80", alt: "Telecommunications network infrastructure and IoT solutions" },
+  { name: "Finance", icon: BarChart3, image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", alt: "Financial analytics and AI-powered fraud detection" },
 ];
 
 const heroSlides = [
@@ -49,7 +29,7 @@ const heroSlides = [
     titleLine2: "with",
     highlight: "SkyRich",
     subtitle: "Empowering enterprises with IoT, AI, cloud computing, and Industry 4.0 platforms to drive intelligent digital transformation.",
-    image: "hero-abstract.png",
+    image: "hero-abstract.jpg",
     stats: [
       { value: "500+", label: "Industries Targeted" },
       { value: "99.9%", label: "Uptime SLA" },
@@ -62,7 +42,7 @@ const heroSlides = [
     titleLine2: "with",
     highlight: "AIDA Platform",
     subtitle: "Transform raw operational data into powerful predictive insights using machine learning and AI-driven analytics.",
-    image: "aida-abstract.png",
+    image: "aida-abstract.jpg",
     stats: [
       { value: "10x", label: "Faster Insights" },
       { value: "30%", label: "Productivity Gain" },
@@ -75,7 +55,7 @@ const heroSlides = [
     titleLine2: "with",
     highlight: "AIVA Platform",
     subtitle: "Convert complex datasets into intuitive visual dashboards and AI-powered visual insights for faster decision making.",
-    image: "aiva-abstract.png",
+    image: "aiva-abstract.jpg",
     stats: [
       { value: "AI", label: "Anomaly Detection" },
       { value: "Live", label: "KPI Monitoring" },
@@ -88,7 +68,7 @@ const heroSlides = [
     titleLine2: "with",
     highlight: "Orbit CRM",
     subtitle: "Next-generation intelligent CRM designed for small and medium businesses to manage leads, customers, and analytics.",
-    image: "orbit-abstract.png",
+    image: "orbit-abstract.jpg",
     stats: [
       { value: "3x", label: "Lead Conversion" },
       { value: "Auto", label: "Follow-ups" },
@@ -149,6 +129,12 @@ export default function Home() {
 
   return (
     <MainLayout>
+      <SEOHead
+        title="SkyRich Tech Solutions | Industry 4.0 & Smart Manufacturing Solutions"
+        description="SkyRich Tech Solutions delivers AI, IoT, smart manufacturing, and Industry 4.0 platforms including AIDA analytics, AIVA visual intelligence, and Orbit CRM. Enterprise digital transformation since 2014."
+        keywords="Industry 4.0, smart manufacturing, AI data analytics, manufacturing automation, IoT solutions, AIDA, AIVA, Orbit CRM, digital transformation, predictive maintenance, factory automation, assembly line software, plant management software, manufacturing ERP, CNC monitoring software, energy monitoring systems"
+        structuredData={[organizationSchema, localBusinessSchema]}
+      />
       <section className="relative min-h-screen flex items-center overflow-hidden bg-[#060e1a]">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A1F3C] via-[#0d2847] to-[#091a30]" />
 
@@ -443,7 +429,7 @@ export default function Home() {
             <div className="animate-marquee flex gap-6 w-max">
               {[...industries, ...industries].map((ind, i) => (
                 <div key={`row1-${i}`} className="relative w-[320px] h-[200px] rounded-2xl overflow-hidden group shrink-0" data-cursor-hover>
-                  <img src={ind.image} alt={ind.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={ind.image} alt={ind.alt || `${ind.name} industry solutions`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F3C]/90 via-[#0A1F3C]/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-[#FF7A1A]">
@@ -460,7 +446,7 @@ export default function Home() {
             <div className="animate-marquee-reverse flex gap-6 w-max">
               {[...industries.slice(4), ...industries.slice(0, 4), ...industries.slice(4), ...industries.slice(0, 4)].map((ind, i) => (
                 <div key={`row2-${i}`} className="relative w-[320px] h-[200px] rounded-2xl overflow-hidden group shrink-0" data-cursor-hover>
-                  <img src={ind.image} alt={ind.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={ind.image} alt={ind.alt || `${ind.name} industry solutions`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F3C]/90 via-[#0A1F3C]/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-[#FF7A1A]">
@@ -482,33 +468,34 @@ export default function Home() {
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {insightsPosts.map((post, i) => (
-            <motion.article
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-              className="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-semibold text-primary shadow-sm">
-                  {post.category}
+            <Link key={post.slug} href={`/insights/${post.slug}`} className="block">
+              <motion.article
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full"
+              >
+                <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-semibold text-primary shadow-sm">
+                    {post.category}
+                  </div>
                 </div>
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
-                  {post.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-6 flex-grow">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 border-t border-gray-100">
-                  <div className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {post.date}</div>
-                  <div className="flex items-center gap-1"><User className="w-3 h-3" /> {post.author}</div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
+                    {post.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-6 flex-grow">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 border-t border-gray-100">
+                    <div className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {post.date}</div>
+                    <div className="flex items-center gap-1"><User className="w-3 h-3" /> {post.author}</div>
+                  </div>
                 </div>
-              </div>
-            </motion.article>
+              </motion.article>
+            </Link>
           ))}
         </div>
         <div className="text-center mt-12">

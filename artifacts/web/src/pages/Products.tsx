@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart3, Eye, Users } from "lucide-react";
+import { SEOHead, createBreadcrumbSchema } from "@/components/SEOHead";
 
 export default function Products() {
   const products = [
@@ -15,7 +16,7 @@ export default function Products() {
       desc: "Harness the power of your enterprise data. AIDA ingests massive streams of operational data to provide predictive insights, unearth inefficiencies, and deliver actionable intelligence in real-time.",
       features: ["Predictive Analytics", "Operational Intelligence", "Real-time Dashboards"],
       link: "/products/aida",
-      image: `${import.meta.env.BASE_URL}images/aida-abstract.png`
+      image: `${import.meta.env.BASE_URL}images/aida-abstract.jpg`
     },
     {
       id: "aiva",
@@ -25,7 +26,7 @@ export default function Products() {
       desc: "Give your operations the power of sight. AIVA utilizes advanced computer vision to monitor assembly lines, detect anomalies, and track spatial KPIs without human intervention.",
       features: ["Visual Dashboards", "Anomaly Detection", "Automated QA"],
       link: "/products/aiva",
-      image: `${import.meta.env.BASE_URL}images/aiva-abstract.png`
+      image: `${import.meta.env.BASE_URL}images/aiva-abstract.jpg`
     },
     {
       id: "orbit",
@@ -35,12 +36,18 @@ export default function Products() {
       desc: "Supercharge your sales and customer relations. Orbit CRM brings enterprise-grade automation and intelligent pipeline tracking to growing small and medium businesses.",
       features: ["Lead Management", "Sales Automation", "Performance Analytics"],
       link: "/products/orbit-crm",
-      image: `${import.meta.env.BASE_URL}images/orbit-abstract.png`
+      image: `${import.meta.env.BASE_URL}images/orbit-abstract.jpg`
     }
   ];
 
   return (
     <MainLayout>
+      <SEOHead
+        title="Enterprise Products | AIDA Analytics, AIVA Visual Intelligence & Orbit CRM"
+        description="Explore SkyRich Tech Solutions flagship products: AIDA AI data analytics platform, AIVA visual analytics for manufacturing, and Orbit CRM for SMEs. Powering Industry 4.0 digital transformation."
+        keywords="AI data analytics platform, visual analytics platform, smart CRM, manufacturing analytics, AI dashboards, business intelligence AI, customer intelligence software, industrial AI platforms"
+        structuredData={[createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Products", url: "/products" }])]}
+      />
       <div className="pt-32 pb-20 px-6 text-center">
         <h1 className="text-5xl md:text-6xl font-black mb-6">Our Platforms</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Deploy specialized intelligent systems designed to solve complex business problems instantly.</p>

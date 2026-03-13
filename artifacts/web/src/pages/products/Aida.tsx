@@ -4,15 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { BarChart3, Zap, Layers, RefreshCw, Settings, CheckCircle2 } from "lucide-react";
+import { SEOHead, createBreadcrumbSchema, createProductSchema } from "@/components/SEOHead";
 
 export default function AidaProduct() {
   return (
     <MainLayout>
+      <SEOHead
+        title="AIDA - AI Data Analytics Platform | Manufacturing Analytics & Predictive Insights"
+        description="AIDA by SkyRich Tech Solutions is an AI-powered data analytics platform that transforms raw industrial data into actionable predictive insights for smart manufacturing, plant management, and Industry 4.0 operations."
+        keywords="AI data analytics platform, manufacturing analytics, industrial AI insights, predictive analytics, operational intelligence, real-time dashboards, factory data analytics, AI powered manufacturing insights, plant performance monitoring software"
+        structuredData={[
+          createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Products", url: "/products" }, { name: "AIDA", url: "/products/aida" }]),
+          createProductSchema({ name: "AIDA - AI Data Analytics Platform", description: "Transform raw industrial and enterprise data into actionable predictive insights with AI-powered analytics.", url: "/products/aida", category: "BusinessApplication" }),
+        ]}
+      />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-primary">
         <div className="absolute inset-0 z-0">
           <img 
-            src={`${import.meta.env.BASE_URL}images/aida-abstract.png`} 
-            alt="AIDA Background" 
+            src={`${import.meta.env.BASE_URL}images/aida-abstract.jpg`} 
+            alt="AIDA AI data analytics platform dashboard for smart manufacturing" 
             className="w-full h-full object-cover opacity-15 mix-blend-screen"
           />
         </div>

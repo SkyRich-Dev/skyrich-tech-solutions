@@ -4,6 +4,7 @@ import { Target, Lightbulb, MapPin, CheckCircle2, Globe, Factory, Car, Stethosco
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { SEOHead, organizationSchema, createBreadcrumbSchema } from "@/components/SEOHead";
 
 const offices = [
   { country: "India", flag: "🇮🇳", cities: ["Chennai (Head Office)", "Mumbai"] },
@@ -49,11 +50,17 @@ const commitmentValues = [
 export default function About() {
   return (
     <MainLayout>
+      <SEOHead
+        title="About SkyRich Tech Solutions | Industry 4.0 Solutions Provider Since 2014"
+        description="Founded in 2014, SkyRich Tech Solutions is a leading Industry 4.0 solutions provider delivering AI, IoT, and smart manufacturing platforms across India, Singapore, Malaysia, and Thailand."
+        keywords="about SkyRich Tech Solutions, Industry 4.0 solutions company, smart manufacturing technology provider, AI manufacturing analytics platform, enterprise technology company India, digital transformation partner"
+        structuredData={[organizationSchema, createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "About", url: "/about" }])]}
+      />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-primary">
         <div className="absolute inset-0 z-0">
           <img 
-            src={`${import.meta.env.BASE_URL}images/about-building.png`} 
-            alt="Corporate HQ" 
+            src={`${import.meta.env.BASE_URL}images/about-building.jpg`} 
+            alt="SkyRich Tech Solutions corporate headquarters in Chennai India" 
             className="w-full h-full object-cover opacity-20 mix-blend-screen"
           />
         </div>

@@ -1,0 +1,219 @@
+You are an SEO engineer and full-stack developer working on the SkyRich Tech Solutions website.
+Your task is to implement advanced SEO optimization across the entire website while NOT modifying the existing UI/UX design or layout.
+Focus on technical SEO, content SEO, structured data, internal linking, and search ranking optimization.
+The goal is to make SkyRich Tech Solutions rank on Google Page 1 for high-value industrial technology and digital transformation keywords.
+Primary SEO Focus
+Optimize the site to rank for the following core keywords:
+Industry 4.0
+Smart Manufacturing
+Assembly Line Software
+Plant Management Software
+Manufacturing Automation
+Industrial IoT Solutions
+Energy Monitoring Systems
+Inventory Management Systems
+Vision Camera Systems
+Machine Vision Solutions
+AI Data Analytics Platform
+Visual Analytics Platform
+Manufacturing Process Control
+Predictive Maintenance Software
+Manufacturing ERP
+Automobile Manufacturing Software
+Car Manufacturing Automation
+Bike Manufacturing Automation
+CNC Monitoring Software
+Factory Automation Systems
+Production Line Monitoring
+Digital Manufacturing Platforms
+Secondary SEO Keywords
+Also optimize for:
+Web Development Services
+Mobile App Development
+SEO Services
+Digital Consulting
+Cyber Security Solutions
+Remote Process Monitoring (RPM)
+Industrial Automation Consulting
+Supply Chain Analytics
+Factory Data Analytics
+Industrial AI Platforms
+Long Tail Keywords (Important)
+Generate and target long-tail search keywords such as:
+AI for smart manufacturing
+Industry 4.0 solutions provider
+Smart factory automation software
+Manufacturing analytics platform
+AI powered manufacturing insights
+Plant performance monitoring software
+Predictive maintenance for factories
+IoT platform for manufacturing
+Automotive manufacturing digital transformation
+SEO Implementation Requirements
+Implement the following technical SEO features.
+1 Page Metadata Optimization
+Every page must include:
+SEO optimized
+meta title
+meta description
+focus keywords
+canonical URL
+Example
+Title
+SkyRich Tech Solutions | Industry 4.0 & Smart Manufacturing Solutions
+Description
+SkyRich Tech Solutions delivers AI, IoT, smart manufacturing, and Industry 4.0 platforms including AIDA analytics, AIVA visual intelligence, and Orbit CRM.
+2 Structured Data (Schema Markup)
+Implement schema markup for:
+Organization
+Product
+BlogArticle
+BreadcrumbList
+LocalBusiness
+Use JSON-LD structured data.
+3 Sitemap & Robots
+Generate
+sitemap.xml
+robots.txt
+Include all pages:
+Home
+Services
+Industries
+Products
+AIDA
+AIVA
+Orbit CRM
+Insights
+About
+Careers
+Contact
+4 SEO Friendly URLs
+Ensure URLs are optimized.
+Example:
+/industry-4-smart-manufacturing-solutions
+/products/aida-ai-data-analytics
+/products/aiva-visual-analytics
+/products/orbit-crm
+/services/iot-smart-manufacturing
+5 Internal Linking Strategy
+Create internal links between:
+services
+product pages
+blog articles
+industry pages
+Example:
+Blog → AIDA product page
+Industry page → IoT services
+Services → case studies
+6 Blog / Insights SEO Engine
+Create an SEO content engine inside the Insights section.
+Generate 10 high-quality SEO articles targeting manufacturing and Industry 4.0 keywords.
+Articles must be 100% unique and deeply researched.
+Example article topics:
+The Future of Industry 4.0 in Manufacturing
+How AI is Transforming Smart Manufacturing
+Why Every Factory Needs Predictive Maintenance
+Industrial IoT and Smart Factory Transformation
+CNC Machine Monitoring Using AI
+Energy Monitoring Systems for Smart Factories
+Machine Vision Systems in Automotive Manufacturing
+How AI Data Analytics Improves Production Efficiency
+Industry 4.0 Implementation Guide for Manufacturers
+Smart Assembly Line Software for Modern Factories
+Each article must include:
+SEO headline
+subheadings (H1 H2 H3)
+internal links
+keywords naturally embedded
+7 Keyword Density Optimization
+Ensure
+primary keywords appear in
+headings
+first paragraph
+image alt tags
+metadata
+Keyword density target
+1.5% – 2.5%
+8 Image SEO
+Optimize all images.
+Add
+alt text
+compressed formats
+lazy loading
+Example alt tags
+"smart manufacturing IoT dashboard"
+"AI based manufacturing analytics platform"
+9 Backlink Strategy Generator
+Create a backlink strategy page for internal SEO management.
+Include recommended backlinks from:
+technology blogs
+manufacturing forums
+Industry 4.0 directories
+startup directories
+AI research platforms
+Example backlink sources
+Medium
+Dev.to
+LinkedIn Articles
+Crunchbase
+ProductHunt
+GitHub
+Manufacturing industry directories
+10 Technical SEO Performance
+Ensure website performance includes:
+fast loading under 2 seconds
+lazy loading
+code splitting
+image optimization
+Implement:
+OpenGraph tags
+Twitter cards
+mobile SEO optimization
+11 SEO Tags & Metadata
+Create a reusable SEO component:
+SEOHead.jsx
+Automatically generates
+title
+description
+canonical URL
+OpenGraph data
+12 Product Page SEO
+Optimize the following product pages heavily.
+AIDA
+Keywords:
+AI data analytics platform
+manufacturing analytics
+industrial AI insights
+AIVA
+Keywords:
+visual analytics platform
+AI dashboards
+business intelligence AI
+Orbit CRM
+Keywords:
+smart CRM for SMEs
+AI CRM platform
+customer intelligence software
+13 Content Uniqueness Rule
+All content must be 100% original.
+Do NOT copy from any other website.
+Generate unique technical insights and explanations.
+14 Google Ranking Optimization
+Ensure pages are optimized to rank for:
+Industry 4.0 solutions company
+smart manufacturing technology provider
+AI manufacturing analytics platform
+15 SEO Monitoring Setup
+Prepare integration capability for
+Google Search Console
+Google Analytics
+Google Tag Manager
+Important
+Do NOT modify the website design or layout.
+Only add:
+SEO structure
+metadata
+content
+blog engine
+schema
+technical SEO improvements

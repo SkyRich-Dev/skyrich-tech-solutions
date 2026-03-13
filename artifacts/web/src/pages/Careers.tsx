@@ -2,6 +2,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Briefcase } from "lucide-react";
+import { SEOHead, createBreadcrumbSchema } from "@/components/SEOHead";
 
 export default function Careers() {
   const jobs = [
@@ -13,6 +14,12 @@ export default function Careers() {
 
   return (
     <MainLayout>
+      <SEOHead
+        title="Careers at SkyRich Tech Solutions | Join Our Innovation Team"
+        description="Join SkyRich Tech Solutions and help build the next generation of enterprise technology. Explore career opportunities in AI engineering, data science, software development, and more across Chennai, India."
+        keywords="technology careers, AI engineer jobs, data scientist jobs, software developer jobs Chennai, enterprise technology careers, Industry 4.0 jobs, manufacturing technology careers"
+        structuredData={[createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Careers", url: "/careers" }])]}
+      />
       <div className="pt-32 pb-20 px-6 bg-gradient-primary">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-black mb-6 text-white">Build the Future With Us</h1>

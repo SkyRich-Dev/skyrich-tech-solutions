@@ -2,6 +2,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { Section } from "@/components/ui/Section";
 import { Factory, Car, Stethoscope, Zap, Truck, Building2, ShoppingCart, Landmark } from "lucide-react";
 import { motion } from "framer-motion";
+import { SEOHead, createBreadcrumbSchema } from "@/components/SEOHead";
 
 const industries = [
   { icon: Factory, name: "Manufacturing", desc: "Optimize assembly lines, implement predictive maintenance, and achieve Industry 4.0 standards with our IoT and AI solutions." },
@@ -17,6 +18,12 @@ const industries = [
 export default function Industries() {
   return (
     <MainLayout>
+      <SEOHead
+        title="Industries We Serve | Manufacturing, Automotive, Healthcare & More"
+        description="SkyRich Tech Solutions delivers tailored Industry 4.0 and smart manufacturing solutions for manufacturing, automotive, healthcare, energy, logistics, real estate, retail, and finance industries."
+        keywords="manufacturing automation, automotive manufacturing software, car manufacturing automation, bike manufacturing automation, smart manufacturing, Industry 4.0 solutions, industrial IoT solutions, factory automation systems, digital manufacturing platforms"
+        structuredData={[createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Industries", url: "/industries" }])]}
+      />
       <div className="pt-32 pb-20 px-6 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl bg-[#FF7A1A]/5 blur-[150px] pointer-events-none rounded-full" />
         <div className="max-w-4xl mx-auto text-center relative z-10">

@@ -7,6 +7,7 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { SEOHead, localBusinessSchema, createBreadcrumbSchema } from "@/components/SEOHead";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -39,6 +40,12 @@ export default function Contact() {
 
   return (
     <MainLayout>
+      <SEOHead
+        title="Contact SkyRich Tech Solutions | Talk to Our Experts"
+        description="Get in touch with SkyRich Tech Solutions for Industry 4.0 consulting, smart manufacturing solutions, AI analytics, and enterprise digital transformation. Contact us at info@skyrichtechsolutions.com or +91 9384801120."
+        keywords="contact SkyRich Tech Solutions, Industry 4.0 consulting, smart manufacturing consultation, enterprise technology partner, digital transformation consulting, industrial automation consulting"
+        structuredData={[localBusinessSchema, createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Contact", url: "/contact" }])]}
+      />
       <div className="pt-32 pb-10 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-black mb-6">Get In Touch</h1>

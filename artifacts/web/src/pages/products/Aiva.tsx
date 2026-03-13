@@ -4,15 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Eye, AlertTriangle, MonitorPlay, FileVideo, Crosshair } from "lucide-react";
+import { SEOHead, createBreadcrumbSchema, createProductSchema } from "@/components/SEOHead";
 
 export default function AivaProduct() {
   return (
     <MainLayout>
+      <SEOHead
+        title="AIVA - AI Visual Analytics Platform | Machine Vision & Quality Inspection"
+        description="AIVA by SkyRich Tech Solutions is an AI-powered visual analytics platform using machine vision and computer vision to monitor assembly lines, detect defects, and automate quality inspection in manufacturing."
+        keywords="visual analytics platform, AI dashboards, business intelligence AI, machine vision solutions, vision camera systems, automated quality inspection, computer vision manufacturing, AI based manufacturing analytics platform"
+        structuredData={[
+          createBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Products", url: "/products" }, { name: "AIVA", url: "/products/aiva" }]),
+          createProductSchema({ name: "AIVA - AI Visual Analytics Platform", description: "Intelligent computer vision for manufacturing quality inspection, anomaly detection, and visual KPI tracking.", url: "/products/aiva", category: "BusinessApplication" }),
+        ]}
+      />
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-primary">
         <div className="absolute inset-0 z-0">
           <img 
-            src={`${import.meta.env.BASE_URL}images/aiva-abstract.png`} 
-            alt="AIVA Background" 
+            src={`${import.meta.env.BASE_URL}images/aiva-abstract.jpg`} 
+            alt="AIVA AI visual analytics platform for manufacturing quality inspection" 
             className="w-full h-full object-cover opacity-15 mix-blend-screen"
           />
         </div>

@@ -1,0 +1,261 @@
+Admin Console + CRM + Blog + Customer Tracking System
+You are a senior full-stack developer working on the SkyRich Tech Solutions website.
+Your task is to build a secure Admin Console and CRM system integrated with the existing website.
+Do not modify the current website design or UI layout. Only integrate backend features and admin dashboards.
+The system must allow SkyRich to manage blog posts, capture customer enquiries, track user behaviour, manage SEO, and analyze visitor data.
+Technology Stack
+Use a scalable modern stack:
+Backend
+Node.js / Laravel API
+Frontend
+React or existing frontend framework
+Database
+PostgreSQL or MySQL
+Analytics Engine
+Custom tracking + cookies
+Admin Dashboard
+React Admin / Bootstrap Admin Panel
+Authentication
+JWT based admin login
+Core Modules to Develop
+Create the following modules inside the Admin Console.
+Admin Authentication
+Blog & Insight Management
+Website CRM (Lead Management)
+Chatbot Enquiry Collection
+Form Enquiry Tracking
+Visitor Behaviour Analytics
+SEO Management
+Cookie & Tracking System
+Notification & Reminder System
+1 Admin Login System
+Create secure login for website admin.
+Features:
+Admin login page
+Role-based access control
+Password encryption
+Session management
+Admin roles:
+Super Admin
+Content Manager
+Sales Manager
+2 Blog & Insights Management
+Create a complete CMS system to manage blog and insight articles.
+Features:
+Create blog post
+Edit blog post
+Delete post
+Schedule post
+Draft mode
+Publish / unpublish
+Blog fields:
+Title
+Slug URL
+SEO Title
+SEO Description
+Focus Keywords
+Content editor (rich text editor)
+Feature image
+Tags
+Category
+Author
+Publish date
+Add support for:
+H1 H2 H3 structure
+Meta tags
+Schema markup
+SEO Management for Blogs
+Admin must be able to manage:
+Meta title
+Meta description
+Keywords
+OpenGraph tags
+Canonical URLs
+Add SEO score indicator for each article.
+3 CRM for Website Enquiries
+Create an internal lead management CRM inside admin.
+Collect enquiries from:
+Talk to Expert form
+Contact form
+Chatbox
+Newsletter signup
+Blog contact forms
+CRM fields:
+Name
+Email
+Phone
+Company
+Location
+Source page
+Message
+Date & time
+Lead status
+Lead status options:
+New Lead
+Contacted
+Follow-up
+Converted
+Closed
+4 Website Chatbox System
+Add a live chat / smart chatbot on the website.
+Chatbox must:
+Allow visitors to chat
+Collect visitor details
+Capture enquiry
+Data captured:
+Name
+Email
+Company
+Phone
+Message
+Chat history
+Page URL
+All chat enquiries must automatically be stored in CRM Leads Database.
+5 Talk to Expert Form Integration
+Every Talk to Expert form submission must:
+Store data in CRM
+Send notification email
+Assign lead status = New Lead
+Send email notification to:
+info@skyrichtechsolutions.com
+6 Email Notification & Reminder System
+When a new enquiry arrives:
+Send email notification to
+info@skyrichtechsolutions.com
+Email must contain:
+Customer name
+Company
+Message
+Page where enquiry came from
+Create automatic reminder system.
+If a lead is not contacted within 24 hours, send reminder email.
+7 Visitor Tracking System
+Implement a custom visitor tracking system.
+Track the following:
+Visitor location (Country / City)
+Device type
+Browser
+Pages visited
+Time spent on page
+Traffic source
+Example traffic sources:
+Google
+LinkedIn
+Direct visit
+Referral website
+Social media
+8 Cookie Management System
+Create GDPR compliant cookie consent system.
+Cookie banner must allow:
+Accept cookies
+Reject cookies
+Customize tracking
+Use cookies to store:
+User session
+Visit history
+Page behaviour
+Return visitor identification
+Store cookie analytics data in database.
+9 Customer Behaviour Analytics
+Admin dashboard must show insights.
+Track metrics such as:
+Total visitors
+Returning visitors
+Pages visited per session
+Top visited pages
+Average time on page
+Create user journey tracking.
+Example:
+Homepage → AIDA page → Contact page
+10 Blog Performance Analytics
+Admin must see blog performance.
+For each blog show:
+Total views
+Unique visitors
+Traffic sources
+Average reading time
+Bounce rate
+Example report:
+Article title
+Views
+Traffic source
+Example sources:
+Google search
+LinkedIn
+Direct traffic
+Referral
+11 Platform Traffic Insights
+Create dashboard to show:
+Traffic by platform
+Google Search
+LinkedIn
+Facebook
+Direct traffic
+Referral websites
+Show charts for:
+Daily traffic
+Weekly traffic
+Monthly traffic
+12 Lead Insights Dashboard
+Admin must see:
+Total enquiries
+Enquiries by source
+Conversion rate
+Example sources:
+Contact form
+Chatbot
+Blog enquiry
+Landing pages
+13 Admin Dashboard Overview
+Main dashboard must display:
+Total website visitors
+Total enquiries
+Total blog views
+Top blog articles
+Recent leads
+Charts required:
+Traffic chart
+Lead chart
+Conversion chart
+14 Customer Data Storage
+Create structured database tables.
+Tables required:
+Users
+BlogPosts
+BlogCategories
+Leads
+ChatMessages
+VisitorAnalytics
+CookieTracking
+SEOData
+Ensure all customer data is stored securely for future analysis.
+15 Security
+Implement:
+Data encryption
+Spam protection
+reCAPTCHA for forms
+SQL injection protection
+16 Reporting System
+Admin must generate reports such as:
+Monthly website traffic
+Lead generation report
+Blog performance report
+Customer location analysis
+Reports export options:
+CSV
+PDF
+17 Important Rule
+Do NOT modify the existing website design or layout.
+Only add:
+Admin console
+Backend APIs
+Tracking scripts
+CRM system
+Analytics dashboards
+Goal
+Create a complete website intelligence system for SkyRich Tech Solutions that helps:
+Capture all customer enquiries
+Track visitor behaviour
+Manage SEO content
+Analyze website performance
+Convert website visitors into business leads.

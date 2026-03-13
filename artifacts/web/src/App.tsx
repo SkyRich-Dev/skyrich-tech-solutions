@@ -19,6 +19,17 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/not-found";
 
+import AdminLogin from "./pages/admin/AdminLogin";
+import Dashboard from "./pages/admin/Dashboard";
+import LeadsManager from "./pages/admin/LeadsManager";
+import BlogManager from "./pages/admin/BlogManager";
+import ChatManager from "./pages/admin/ChatManager";
+import AnalyticsPage from "./pages/admin/AnalyticsPage";
+
+import ChatWidget from "./components/widgets/ChatWidget";
+import CookieConsent from "./components/widgets/CookieConsent";
+import VisitorTracker from "./components/widgets/VisitorTracker";
+
 const queryClient = new QueryClient();
 
 function Router() {
@@ -38,6 +49,12 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin" component={Dashboard} />
+      <Route path="/admin/leads" component={LeadsManager} />
+      <Route path="/admin/blog" component={BlogManager} />
+      <Route path="/admin/chat" component={ChatManager} />
+      <Route path="/admin/analytics" component={AnalyticsPage} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -49,6 +66,9 @@ function App() {
       <CustomCursor />
       <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
         <Router />
+        <ChatWidget />
+        <CookieConsent />
+        <VisitorTracker />
       </WouterRouter>
       <Toaster />
     </QueryClientProvider>
