@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { db, leadsTable, visitorAnalyticsTable, pageViewsTable, blogPostsTable, chatSessionsTable } from "@workspace/db";
+import { db, leadsTable, visitorAnalyticsTable, pageViewsTable, blogPostsTable, chatSessionsTable } from "../../../../lib/db/src/index.ts";
 import { desc, count, gte, sql } from "drizzle-orm";
 import { authMiddleware } from "../middleware/auth";
 

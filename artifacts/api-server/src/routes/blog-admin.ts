@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { db, blogPostsTable, blogCategoriesTable } from "@workspace/db";
+import { db, blogPostsTable, blogCategoriesTable } from "../../../../lib/db/src/index.ts";
 import { eq, desc, count } from "drizzle-orm";
 import { authMiddleware } from "../middleware/auth";
 import { sanitizeString, sanitizeHtml, validateUrl, validatePaginationParams, validateIdParam } from "../middleware/security";
@@ -76,7 +76,7 @@ blogAdminRouter.post("/admin/blog/posts", authMiddleware, async (req, res) => {
 
 blogAdminRouter.put("/admin/blog/posts/:id", authMiddleware, validateIdParam, async (req, res) => {
   try {
-    const id = parseInt(req.params.id);
+    const id = Number(req.params.id);
     const updates: any = { updatedAt: new Date() };
 
     if (req.body.title) updates.title = sanitizeString(req.body.title, 500);
@@ -130,7 +130,7 @@ blogAdminRouter.put("/admin/blog/posts/:id", authMiddleware, validateIdParam, as
 
 blogAdminRouter.delete("/admin/blog/posts/:id", authMiddleware, validateIdParam, async (req, res) => {
   try {
-    const id = parseInt(req.params.id);
+    const id = Number(req.params.id);
     const result = await db.delete(blogPostsTable).where(eq(blogPostsTable.id, id)).returning();
     if (result.length === 0) return res.status(404).json({ error: "Post not found" });
     return res.json({ message: "Post deleted" });

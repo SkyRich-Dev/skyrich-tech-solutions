@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { db, adminUsersTable } from "@workspace/db";
+import { db, adminUsersTable } from "../../../../lib/db/src/index.ts";
 import { eq } from "drizzle-orm";
 import { generateToken, hashPassword, verifyPassword, needsRehash, authMiddleware } from "../middleware/auth";
 import { loginRateLimiter, recordLoginAttempt, sanitizeString, validateEmail } from "../middleware/security";

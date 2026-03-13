@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { db, visitorAnalyticsTable, pageViewsTable, cookieTrackingTable } from "@workspace/db";
+import { db, visitorAnalyticsTable, pageViewsTable, cookieTrackingTable } from "../../../../lib/db/src/index.ts";
 import { eq, desc, sql, count, gte } from "drizzle-orm";
 import { authMiddleware } from "../middleware/auth";
 import { publicRateLimiter, sanitizeString } from "../middleware/security";

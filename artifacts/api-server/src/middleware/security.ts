@@ -157,7 +157,7 @@ export function securityHeaders(_req: Request, res: Response, next: NextFunction
 
 export function validateIdParam(req: Request, res: Response, next: NextFunction): void {
   const id = req.params.id;
-  if (id !== undefined) {
+  if (typeof id === "string") {
     const parsed = parseInt(id);
     if (isNaN(parsed) || parsed < 1 || parsed > 2147483647) {
       res.status(400).json({ error: "Invalid ID parameter" });

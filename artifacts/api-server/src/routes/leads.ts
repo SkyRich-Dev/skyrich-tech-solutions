@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { db, leadsTable } from "@workspace/db";
+import { db, leadsTable } from "../../../../lib/db/src/index.ts";
 import { eq, desc, count } from "drizzle-orm";
 import { authMiddleware } from "../middleware/auth";
 import { publicRateLimiter, sanitizeString, validateEmail, validatePhone, validatePaginationParams, validateIdParam } from "../middleware/security";
@@ -49,12 +49,9 @@ leadsRouter.get("/admin/leads", authMiddleware, async (req, res) => {
     const { page, limit } = validatePaginationParams(req.query.page, req.query.limit);
     const status = sanitizeString(req.query.status as string, 50);
     const offset = (page - 1) * limit;
-
-    let query = db.select().from(leadsTable).orderBy(desc(leadsTable.createdAt)).limit(limit).offset(offset);
-    if (status && VALID_STATUSES.includes(status)) {
-      query = db.select().from(leadsTable).where(eq(leadsTable.status, status)).orderBy(desc(leadsTable.createdAt)).limit(limit).offset(offset);
-    }
-    const leads = await query;
+    const leads = status && VALID_STATUSES.includes(status)
+      ? await db.select().from(leadsTable).where(eq(leadsTable.status, status)).orderBy(desc(leadsTable.createdAt)).limit(limit).offset(offset)
+      : await db.select().from(leadsTable).orderBy(desc(leadsTable.createdAt)).limit(limit).offset(offset);
     const [totalResult] = await db.select({ count: count() }).from(leadsTable);
     return res.json({ leads, total: totalResult.count, page, limit });
   } catch (error) {
@@ -64,7 +61,7 @@ leadsRouter.get("/admin/leads", authMiddleware, async (req, res) => {
 
 leadsRouter.put("/admin/leads/:id", authMiddleware, validateIdParam, async (req, res) => {
   try {
-    const id = parseInt(req.params.id);
+    const id = Number(req.params.id);
     const status = sanitizeString(req.body.status, 50);
     const notes = sanitizeString(req.body.notes, 2000);
     const assignedTo = sanitizeString(req.body.assignedTo, 255);
@@ -85,7 +82,7 @@ leadsRouter.put("/admin/leads/:id", authMiddleware, validateIdParam, async (req,
 
 leadsRouter.delete("/admin/leads/:id", authMiddleware, validateIdParam, async (req, res) => {
   try {
-    const id = parseInt(req.params.id);
+    const id = Number(req.params.id);
     const result = await db.delete(leadsTable).where(eq(leadsTable.id, id)).returning();
     if (result.length === 0) return res.status(404).json({ error: "Lead not found" });
     return res.json({ message: "Lead deleted" });

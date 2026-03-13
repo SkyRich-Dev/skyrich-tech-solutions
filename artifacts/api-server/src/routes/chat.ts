@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { db, chatSessionsTable, chatMessagesTable, leadsTable } from "@workspace/db";
+import { db, chatSessionsTable, chatMessagesTable, leadsTable } from "../../../../lib/db/src/index.ts";
 import { eq, desc, count } from "drizzle-orm";
 import { authMiddleware } from "../middleware/auth";
 import { publicRateLimiter, sanitizeString, validateEmail, validatePhone, validatePaginationParams, validateIdParam } from "../middleware/security";
@@ -103,7 +103,7 @@ chatRouter.get("/admin/chat/sessions", authMiddleware, async (req, res) => {
 
 chatRouter.get("/admin/chat/sessions/:id/messages", authMiddleware, validateIdParam, async (req, res) => {
   try {
-    const sessionId = parseInt(req.params.id);
+    const sessionId = Number(req.params.id);
     const messages = await db.select().from(chatMessagesTable).where(eq(chatMessagesTable.sessionId, sessionId)).orderBy(chatMessagesTable.createdAt).limit(500);
     return res.json(messages);
   } catch (error) {
