@@ -1,7 +1,7 @@
 import "dotenv/config";
 import app from "./app";
 
-const rawPort = process.env["API_PORT"] ?? "3003";
+const rawPort = process.env["PORT"] ?? process.env["API_PORT"] ?? "3003";
 
 const port = Number(rawPort);
 

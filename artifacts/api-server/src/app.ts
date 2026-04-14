@@ -1,9 +1,12 @@
+import path from "path";
+import { existsSync } from "fs";
 import express, { type Express, Request, Response, NextFunction } from "express";
 import cors from "cors";
 import router from "./routes";
 import { securityHeaders } from "./middleware/security";
 
 const app: Express = express();
+const clientDistPath = path.resolve(process.cwd(), "dist");
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(",")
@@ -26,8 +29,21 @@ app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: true, limit: "1mb" }));
 
 app.disable("x-powered-by");
+app.set("trust proxy", 1);
 
 app.use("/api", router);
+
+if (existsSync(clientDistPath)) {
+  app.use(express.static(clientDistPath));
+
+  app.get("/{*path}", (req, res, next) => {
+    if (req.path.startsWith("/api")) {
+      return next();
+    }
+
+    return res.sendFile(path.join(clientDistPath, "index.html"));
+  });
+}
 
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   console.error("Unhandled error:", err.message);

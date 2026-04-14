@@ -7,7 +7,9 @@
     "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
     "dev:client": "vite --host 0.0.0.0",
     "dev:server": "tsx watch artifacts/api-server/src/index.ts",
-    "build": "npm run typecheck && vite build",
+    "build:client": "vite build",
+    "build": "npm run typecheck && npm run build:client",
+    "start": "tsx artifacts/api-server/src/index.ts",
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "db:push": "drizzle-kit push --config lib/db/drizzle.config.cjs"
